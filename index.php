@@ -52,15 +52,18 @@ $hotels = [
 
 ?>
 
-<p>
-    <?php
-    foreach($hotels as $hotel){
-        foreach($hotel as $key => $value){
-            echo $key . ': ' . $value;
-        }
-    }
-    ?>
-</p>
+<table class="table">
+        <tbody>
+            <?php 
+              foreach($hotels as $hotel){
+                foreach($hotel as $key => $value){
+                    echo "<tr><th scope='row'>$key</th><td>$value</td></tr>";
+                }
+              }
+            ?>
+        </tbody>
+</table>
+
 
 </body>
 </html>
